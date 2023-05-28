@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteAlertView" customModule="ToDoList" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="TKQ-r7-nWC"/>
+                <outlet property="lblMessage" destination="i3h-lH-Rhl" id="dg1-VT-0TT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ki-tG-ooz">
+                    <rect key="frame" x="24" y="323.33333333333331" width="345" height="205.33333333333331"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6p-6u-XUp">
+                            <rect key="frame" x="24" y="24" width="297" height="28.333333333333329"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
+                            <color key="textColor" name="textColorSecondary"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to delete “Classification”, this action can’t be undone.  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3h-lH-Rhl">
+                            <rect key="frame" x="24" y="68.333333333333371" width="297" height="33"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                            <color key="textColor" name="placeHolderTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="guX-iC-qJU">
+                            <rect key="frame" x="205.66666666666666" y="141.33333333333337" width="115.33333333333334" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YU4-4r-d0g">
+                                    <rect key="frame" x="0.0" y="0.0" width="68" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="68" id="PPZ-oa-VHl"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto Medium" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" name="buttonColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionCancel:" destination="-1" eventType="touchUpInside" id="QIY-QM-ReD"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOr-Sv-EfY">
+                                    <rect key="frame" x="68.000000000000028" y="0.0" width="47.333333333333343" height="40"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto Medium" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="OK">
+                                        <color key="titleColor" name="buttonColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionOK:" destination="-1" eventType="touchUpInside" id="qQw-QG-efV"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="til-ab-G36"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="i3h-lH-Rhl" firstAttribute="trailing" secondItem="I6p-6u-XUp" secondAttribute="trailing" id="GCF-jB-01D"/>
+                        <constraint firstAttribute="trailing" secondItem="I6p-6u-XUp" secondAttribute="trailing" constant="24" id="HBv-SJ-AGG"/>
+                        <constraint firstItem="I6p-6u-XUp" firstAttribute="leading" secondItem="5ki-tG-ooz" secondAttribute="leading" constant="24" id="IxA-oX-eAc"/>
+                        <constraint firstItem="guX-iC-qJU" firstAttribute="trailing" secondItem="i3h-lH-Rhl" secondAttribute="trailing" id="N89-Xl-Vki"/>
+                        <constraint firstItem="I6p-6u-XUp" firstAttribute="top" secondItem="5ki-tG-ooz" secondAttribute="top" constant="24" id="boz-Th-nhI"/>
+                        <constraint firstItem="guX-iC-qJU" firstAttribute="top" secondItem="i3h-lH-Rhl" secondAttribute="bottom" constant="40" id="d3I-fx-epG"/>
+                        <constraint firstItem="i3h-lH-Rhl" firstAttribute="leading" secondItem="I6p-6u-XUp" secondAttribute="leading" id="dtD-CI-M9n"/>
+                        <constraint firstAttribute="bottom" secondItem="guX-iC-qJU" secondAttribute="bottom" constant="24" id="k5y-CP-Dzg"/>
+                        <constraint firstItem="i3h-lH-Rhl" firstAttribute="top" secondItem="I6p-6u-XUp" secondAttribute="bottom" constant="16" id="pgr-xr-c5A"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="28"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5ki-tG-ooz" secondAttribute="trailing" constant="24" id="Da2-T2-yIg"/>
+                <constraint firstItem="5ki-tG-ooz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JCg-xd-PaF"/>
+                <constraint firstItem="5ki-tG-ooz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="gQ9-1L-N11"/>
+                <constraint firstItem="5ki-tG-ooz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jgX-Zs-O5j"/>
+            </constraints>
+            <point key="canvasLocation" x="21" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="0.40392156862745099" green="0.31372549019607843" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="placeHolderTextColor">
+            <color red="0.28627450980392155" green="0.27058823529411763" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColorSecondary">
+            <color red="0.11372549019607843" green="0.10588235294117647" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
